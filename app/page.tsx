@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { ImageGridMotion } from "@/components/ImageGridMotion";
+import { Hero } from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col max-w-screen-xl mx-auto">
-      <ImageGridMotion />
+    <main className="flex min-h-screen flex-col w-full overflow-hidden">
+      <Hero />
     </main>
   );
 }
