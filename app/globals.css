@@ -28,8 +28,8 @@ body {
   text-fill-color: transparent;
 
   /* Modern browsers with support for text-stroke */
-  -webkit-text-stroke: 2px var(--text); /* WebKit-based (Safari, Chrome) */
-  text-stroke: 2px var(--text); /* Standard */
+  -webkit-text-stroke: 1px var(--text); /* WebKit-based (Safari, Chrome) */
+  text-stroke: 1px var(--text); /* Standard */
 }
 
 .bg-noise {
