@@ -50,14 +50,17 @@ export const Hero = () => {
         <div className="h-1/4 bg-gradient-to-t from-zinc-950 to-transparent absolute bottom-[-50px] w-full"></div>
       </div>
 
-      <div className="flex flex-col flex-1 w-full h-full relative items-center justify-center max-w-screen-md text-center z-30">
-        <h1 className="text-10vw font-light leading-none m-0 relative no-select">
-          <NextImage alt="" src="img/logo.svg" width={392} height={244} />
+      <div className="flex flex-col flex-1 w-full h-screen relative items-center justify-center max-w-screen-md text-center z-30">
+        <h1 className="relative no-select w-full  m-0">
+          <NextImage alt="" src="img/logo-hero.svg" width={966} height={300} />
         </h1>
 
-        <p className="text-2xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
+        <p className="text-3xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
           Rapper. Award-Winning Design Engineer. Tech Speaker.
         </p>
+        <ul>
+          <li></li>
+        </ul>
       </div>
     </div>
   );

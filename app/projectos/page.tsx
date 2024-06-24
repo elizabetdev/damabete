@@ -1,16 +1,6 @@
-"use client";
-import { Hero } from "@/components/Hero";
-import React from "react";
-import { BlurScrollEffect } from "@/components/BlurScrollEffect";
-
-export default function Home() {
-  const text =
-    "Olá! Eu sou a Elizabet, uma Rapper e Award Winner Design Engineer. Sou filha de pai português e mãe moçambicana e fui a primeira rapper feminina a solo a assinar com uma grande editora em Portugal. Vivi em Dublin durante quatro anos, por isso aprendi a gostar de Guinness! Adoro tanto música como tecnologia e tenho uma paixão especial por combinar as duas para criar experiências inovadoras.";
-
+export default function Sobre() {
   return (
-    <main>
-      <Hero />
-
+    <main className="text-center py-20">
       <section className="my-20">
         <h2 className="text-3xl font-bold mb-6">Biografia</h2>
         <p className="max-w-3xl mx-auto">
@@ -32,8 +22,6 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6">História Pessoal</h2>
         <p className="max-w-3xl mx-auto">[História pessoal e inspiração]</p>
       </section>
-
-      <BlurScrollEffect text={text} />
     </main>
   );
 }

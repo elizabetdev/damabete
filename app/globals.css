@@ -6,6 +6,8 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+  --accent: #fd2c5b;
+  --text: white;
 }
 
 body {
@@ -18,6 +20,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-trail {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+
+  /* Modern browsers with support for text-stroke */
+  -webkit-text-stroke: 2px var(--text); /* WebKit-based (Safari, Chrome) */
+  text-stroke: 2px var(--text); /* Standard */
 }
 
 .bg-noise {
