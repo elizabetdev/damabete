@@ -15,11 +15,10 @@ export const Header = () => {
 
   // Array containing navigation items
   const navItems = [
-    { id: 1, text: "Sobre", href: "/sobre" },
-    { id: 2, text: "Musica", href: "/musica" },
-    { id: 3, text: "Projectos", href: "/projectos" },
-    { id: 4, text: "Eventos", href: "/eventos" },
-    { id: 5, text: "Contactos", href: "/contactos" },
+    { text: "Sobre", href: "/sobre" },
+    { text: "Musica", href: "/musica" },
+    { text: "Eventos", href: "/eventos" },
+    { text: "Contactos", href: "/contactos" },
   ];
 
   const onClickPageLink = (href: string) => {
@@ -30,7 +29,7 @@ export const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center h-24 max-w-screen-xl mx-auto px-4 text-white w-full z-50`}
+      className={`flex justify-between items-center h-24 container mx-auto px-4 text-white w-full z-50`}
     >
       {/* Logo */}
       <h1 className="w-full">
@@ -41,9 +40,9 @@ export const Header = () => {
 
       {/* Desktop Navigation */}
       <ul className="hidden md:flex ">
-        {navItems.map((item) => (
+        {navItems.map((item, i) => (
           <li
-            key={item.id}
+            key={i}
             className="p-4 hover:text-[--accent]  m-2 cursor-pointer duration-300"
           >
             <Link href={item.href}>{item.text}</Link>
@@ -52,7 +51,7 @@ export const Header = () => {
       </ul>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={() => setIsNavVisibe(true)}>
+      <div className="md:hidden" onClick={() => setIsNavVisibe(true)}>
         <AiOutlineMenu size={20} />
       </div>
 
@@ -78,10 +77,10 @@ export const Header = () => {
 
         <ul>
           {/* Mobile Navigation Items */}
-          {navItems.map((item) => (
+          {navItems.map((item, i) => (
             <Link
               href={item.href}
-              key={item.id}
+              key={i}
               onClick={() => onClickPageLink(item.href)}
             >
               <li

@@ -4,7 +4,7 @@ import { GridItem } from "./GridItem";
 
 export const Hero = () => {
   return (
-    <div className="content flex flex-col flex-1 w-full relative items-center justify-center max-h-[800px] min-h-screen">
+    <div className="content flex flex-col flex-1 w-full relative items-center justify-center max-h-[800px] min-h-screen px-4">
       <div className="grid pointer-events-none absolute w-[200%] lg:w-[110%] h-[100%] top-0 left-0 grid grid-cols-[repeat(50,2%)] grid-rows-[repeat(50,2%)] opacity-70 grayscale-[20%]">
         <GridItem gridArea="10 / 1 / 26 / 7" backgroundImage="url(img/1.jpg)" />
         <GridItem
@@ -55,7 +55,7 @@ export const Hero = () => {
           <NextImage alt="" src="img/logo-hero.svg" width={966} height={300} />
         </h1>
 
-        <p className="text-3xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
+        <p className="text-2xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
           Rapper. Award-Winning Design Engineer. Tech Speaker.
         </p>
         <ul>
