@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <div className="relative flex min-h-screen flex-col w-full overflow-hidden">
           <Header />
-          <div className="absolute inset-0 bg-noise opacity-30 z-20"></div>
+          <div className="absolute inset-0 bg-noise opacity-30 z-20 pointer-events-none"></div>
           {children}
         </div>
       </body>
