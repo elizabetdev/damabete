@@ -5,7 +5,7 @@ export default function Sobre() {
     <main className="py-20 z-30">
       <div className="container px-4 mx-auto">
         <section className="my-20">
-          <h2 className="text-3xl font-bold mb-6 text-center">Biografia</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Sobre</h2>
           <p className="max-w-3xl mx-auto">
             Dama Bete é uma rapper luso-moçambicana, conhecida por ser a
             primeira MC feminina, em Portugal, a assinar com uma editora
@@ -31,7 +31,7 @@ export default function Sobre() {
         </section>
 
         <section className="my-20">
-          <h2 className="text-2xl font-bold mb-6 text-center">Biografia</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">Timeline</h2>
           <Timeline />
         </section>
       </div>

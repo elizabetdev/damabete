@@ -4,8 +4,8 @@ import { timelineItems, TimelineItemProps } from "@/data/timeline";
 
 export const Timeline = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 md:px-6 ">
-      <div className="flex flex-col justify-center divide-y divide-zinc-200 [&>*]:py-16">
+    <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
+      <div className="flex flex-col justify-center divide-y divide-zinc-200">
         <div className="w-full max-w-3xl mx-auto">
           {/* <!-- Vertical Timeline #1 --> */}
           <div className="-my-6">
