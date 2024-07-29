@@ -34,7 +34,7 @@ export const Header = () => {
       {/* Logo */}
       <h1 className="w-full">
         <Link href="/">
-          <NextImage alt="" src="img/logo.svg" width={287} height={21} />
+          <NextImage alt="" src="/img/logo.svg" width={287} height={21} />
         </Link>
       </h1>
 
