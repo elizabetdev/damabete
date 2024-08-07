@@ -1,11 +1,11 @@
+import { ReactNode } from "react";
+
 export type TimelineItemProps = {
   date: string;
   title: string;
   content: string | ReactNode;
   image?: string;
 };
-
-import { ReactNode } from "react";
 
 export const timelineItems: TimelineItemProps[] = [
   {

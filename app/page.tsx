@@ -1,13 +1,13 @@
 "use client";
 import { Hero } from "@/components/Hero";
 import React from "react";
-import { Eventos } from "@/components/Eventos";
+import { DestaquesRecentes } from "@/components/DestaquesRecentes";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Eventos />
+      <DestaquesRecentes />
     </main>
   );
 }
