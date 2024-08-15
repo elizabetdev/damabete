@@ -1,0 +1,67 @@
+import Link from "next/link";
+import {
+  FaInstagram,
+  FaTiktok,
+  FaXTwitter,
+  FaGithub,
+  FaSpotify,
+} from "react-icons/fa6";
+import { FC } from "react";
+
+export type SocialMediaListProps = {
+  iconSize?: number;
+};
+
+export const SocialMediaList: FC<SocialMediaListProps> = ({
+  iconSize = 24,
+}) => {
+  return (
+    <ul className="flex justify-center mt-5 space-x-5">
+      <li>
+        <Link
+          href="https://www.instagram.com/damabete/"
+          className="text-white hover:text-rose-500"
+          target="_blank"
+        >
+          <FaInstagram size={iconSize} />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="https://www.tiktok.com/@damabetemusic"
+          className="text-white hover:text-rose-500"
+          target="_blank"
+        >
+          <FaTiktok size={iconSize} />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="https://x.com/miuki_miu"
+          className="text-white hover:text-rose-500"
+          target="_blank"
+        >
+          <FaXTwitter size={iconSize} />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="https://open.spotify.com/artist/0cFnYwwUg1OWV2AksuN22j?si=h-DeBOgBQoSzulZql0On3Q"
+          className="text-white hover:text-rose-500"
+          target="_blank"
+        >
+          <FaSpotify size={iconSize} />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="https://github.com/miukimiu/"
+          className="text-white hover:text-rose-500"
+          target="_blank"
+        >
+          <FaGithub size={iconSize} />
+        </Link>
+      </li>
+    </ul>
+  );
+};

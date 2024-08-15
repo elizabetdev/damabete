@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { inter } from "@/utils/fonts";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Dama Bete",
@@ -21,6 +22,8 @@ export default function RootLayout({
           <Header />
           <div className="absolute inset-0 bg-noise opacity-30 z-20 pointer-events-none"></div>
           {children}
+
+          <Footer />
         </div>
       </body>
     </html>

@@ -1,9 +1,8 @@
 "use client";
 import NextImage from "next/image";
 import { GridItem } from "./GridItem";
-import { SocialMediaList } from "./SocialMediaList";
 
-export const Hero = () => {
+export const Stats = () => {
   return (
     <div className="content flex flex-col flex-1 w-full relative items-center justify-center max-h-[800px] min-h-screen px-4">
       <div className="grid pointer-events-none absolute w-[200%] lg:w-[110%] h-[100%] top-0 left-0 grid grid-cols-[repeat(50,2%)] grid-rows-[repeat(50,2%)] opacity-70 grayscale-[20%]">
@@ -59,8 +58,9 @@ export const Hero = () => {
         <p className="text-2xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
           Rapper. Award-Winning Design Engineer. Tech Speaker.
         </p>
-
-        <SocialMediaList />
+        <ul>
+          <li></li>
+        </ul>
       </div>
     </div>
   );

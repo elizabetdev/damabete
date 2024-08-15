@@ -13,7 +13,7 @@ export default function DestaquesPage() {
           >
             Em Destaque
           </h2>
-          <p className="mb-20 text-lg text-zinc-400 font-medium leading-normal md:max-w-xl">
+          <p className="mb-20 text-lg text-zinc-400 font-medium leading-normal md:max-w-xl m-auto">
             Descobre os eventos e participações onde vou estar presente, desde
             concertos e conferências até masterclasses e iniciativas especiais.
             Fica a par das minhas próximas atuações e explora os vídeos das
