@@ -1,67 +1,74 @@
 "use client";
-import NextImage from "next/image";
-import { GridItem } from "./GridItem";
+import { FC, ReactNode } from "react";
+import {
+  FaInstagram,
+  FaTiktok,
+  FaXTwitter,
+  FaGithub,
+  FaSpotify,
+} from "react-icons/fa6";
+import { SectionTitle } from "./SectionTitle";
+import { Section } from "./Section";
+
+const StatCard = ({
+  number,
+  title,
+  icon,
+}: {
+  number: string;
+  title: string;
+  icon: ReactNode;
+}) => {
+  return (
+    <div className="w-fit rounded-[25px] bg-zinc-800 p-8 flex flex-col items-center aspect-square">
+      <div className="h-12">{icon}</div>
+      <div className="my-2">
+        <h2 className="text-4xl font-bold">
+          <span>{number}</span>
+        </h2>
+      </div>
+
+      <div>
+        <p className="mt-2 font-sans text-base font-medium text-gray-100">
+          {title}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export const Stats = () => {
   return (
-    <div className="content flex flex-col flex-1 w-full relative items-center justify-center max-h-[800px] min-h-screen px-4">
-      <div className="grid pointer-events-none absolute w-[200%] lg:w-[110%] h-[100%] top-0 left-0 grid grid-cols-[repeat(50,2%)] grid-rows-[repeat(50,2%)] opacity-70 grayscale-[20%]">
-        <GridItem gridArea="10 / 1 / 26 / 7" backgroundImage="url(img/1.jpg)" />
-        <GridItem
-          gridArea="4 / 20 / 16 / 31"
-          backgroundImage="url(img/2.jpg)"
+    <Section>
+      <SectionTitle title="Estatísticas" description="" />
+
+      <div className="flex flex-wrap justify-center gap-8">
+        <StatCard
+          number="1,094"
+          title="followers"
+          icon={<FaInstagram className="text-zinc-100" size={50} />}
         />
-        <GridItem
-          gridArea="1 / 36 / 14 / 42"
-          backgroundImage="url(img/3.jpg)"
+        <StatCard
+          number="13"
+          title="followers"
+          icon={<FaTiktok className="text-zinc-100" size={50} />}
         />
-        <GridItem
-          gridArea="13 / 11 / 32 / 18"
-          backgroundImage="url(img/4.jpg)"
+        <StatCard
+          number="7,070"
+          title="followers"
+          icon={<FaXTwitter className="text-zinc-100" size={50} />}
         />
-        <GridItem
-          gridArea="17 / 32 / 32 / 38"
-          backgroundImage="url(img/5.jpg)"
+        <StatCard
+          number="972"
+          title="followers"
+          icon={<FaGithub className="text-zinc-100" size={50} />}
         />
-        <GridItem
-          gridArea="18 / 42 / 33 / 50"
-          backgroundImage="url(img/6.jpg)"
-        />
-        <GridItem
-          gridArea="43 / 1 / 51 / 10"
-          backgroundImage="url(img/7.jpg)"
-        />
-        <GridItem
-          gridArea="36 / 12 / 46 / 22"
-          backgroundImage="url(img/8.jpg)"
-        />
-        <GridItem
-          gridArea="40 / 26 / 51 / 32"
-          backgroundImage="url(img/9.jpg)"
-        />
-        <GridItem
-          gridArea="37 / 39 / 48 / 47"
-          backgroundImage="url(img/10.jpg)"
+        <StatCard
+          number="2,104"
+          title="followers"
+          icon={<FaSpotify className="text-zinc-100" size={50} />}
         />
       </div>
-
-      <div className="absolute inset-0 z-10">
-        <div className="h-1/4 bg-gradient-to-b from-zinc-950 to-transparent absolute top-0 w-full"></div>
-        <div className="h-1/4 bg-gradient-to-t from-zinc-950 to-transparent absolute bottom-[-50px] w-full"></div>
-      </div>
-
-      <div className="flex flex-col flex-1 w-full h-screen relative items-center justify-center max-w-screen-md text-center z-30">
-        <h1 className="relative no-select w-full  m-0">
-          <NextImage alt="" src="img/logo-hero.svg" width={966} height={300} />
-        </h1>
-
-        <p className="text-2xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
-          Rapper. Award-Winning Design Engineer. Tech Speaker.
-        </p>
-        <ul>
-          <li></li>
-        </ul>
-      </div>
-    </div>
+    </Section>
   );
 };

@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { DestaqueProps } from "@/data/destaques";
 
-type DestaquesProps = {
+type DestaquesListProps = {
   destaques: DestaqueProps[];
 };
 
-export const Destaques: React.FC<DestaquesProps> = ({ destaques }) => {
+export const DestaquesList: React.FC<DestaquesListProps> = ({ destaques }) => {
   return (
     <div className="flex flex-wrap -m-8">
       {destaques.map((item, index) => (
