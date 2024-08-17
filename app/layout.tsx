@@ -3,11 +3,11 @@ import { inter } from "@/utils/fonts";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Dama Bete",
-  description:
-    "Official website of Dama Bete: Rapper, Award-Winning Design Engineer, Tech Speaker",
+  description: "Dama Bete: Rapper, Award-Winning Design Engineer, Tech Speaker",
 };
 
 export default function RootLayout({
@@ -26,6 +26,7 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-60LHJ27B3Z" />
     </html>
   );
 }
