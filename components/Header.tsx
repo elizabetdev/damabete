@@ -16,9 +16,9 @@ export const Header = () => {
   // Array containing navigation items
   const navItems = [
     { text: "Sobre", href: "/sobre" },
-    { text: "Projectos", href: "/projectos" },
+    // { text: "Projectos", href: "/projectos" },
     { text: "Destaques", href: "/destaques" },
-    { text: "Contactos", href: "/contactos" },
+    // { text: "Contactos", href: "/contactos" },
   ];
 
   const onClickPageLink = (href: string) => {

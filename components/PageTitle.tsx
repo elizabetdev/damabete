@@ -5,7 +5,7 @@ export const PageTitle = ({
   description,
 }: {
   title: string;
-  description?: string;
+  description?: string | React.ReactNode;
 }) => {
   return (
     <>
@@ -15,10 +15,12 @@ export const PageTitle = ({
         {title}
       </h2>
 
-      {description && (
+      {description && typeof description === "string" ? (
         <p className="mb-20 text-lg text-zinc-400 font-medium leading-normal md:max-w-xl m-auto">
           {description}
         </p>
+      ) : (
+        description
       )}
     </>
   );
