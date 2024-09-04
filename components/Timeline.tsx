@@ -30,13 +30,7 @@ export const Timeline = () => {
                     {item.date}
                   </time>
 
-                  <div className="p-4 h-full bg-zinc-800 rounded-xl">
-                    <div className="text-xl font-bold text-rose-500">
-                      {item.title}
-                    </div>
-
-                    <div className="text-zinc-200 mb-2">{item.content}</div>
-
+                  <div className="h-full text-left">
                     <div className="rounded-xl overflow-hidden">
                       <NextImage
                         alt=""
@@ -46,6 +40,12 @@ export const Timeline = () => {
                         quality={90} // Adjust quality setting
                       />
                     </div>
+
+                    <div className="text-xl font-bold text-rose-500">
+                      {item.title}
+                    </div>
+
+                    <div className="text-zinc-200 mb-2">{item.content}</div>
                   </div>
                 </div>
                 {/* <!-- Content --> */}

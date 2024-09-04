@@ -32,14 +32,14 @@ body {
   text-stroke: 1px var(--text); /* Standard */
 }
 
-.bg-noise {
+/* .bg-noise {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
   height: 500%;
   width: 500%;
   position: fixed;
   opacity: 0.06;
   animation: animateGrain 8s steps(10) infinite;
-}
+} */
 
 @keyframes animateGrain {
   0%,

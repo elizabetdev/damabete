@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -96,5 +97,9 @@ export const LineChart: React.FC = () => {
     },
   };
 
-  return <Line data={lineChartData} options={lineChartOptions as any} />;
+  return (
+    <div className="w-full shadow-lg rounded-lg p-4 m-auto">
+      <Line data={lineChartData} options={lineChartOptions as any} />
+    </div>
+  );
 };

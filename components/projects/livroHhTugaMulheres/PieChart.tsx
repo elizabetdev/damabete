@@ -67,5 +67,9 @@ export const PieChart = () => {
     },
   };
 
-  return <Pie data={pieData} options={pieOptions as any} />;
+  return (
+    <div className="w-full max-w-sm shadow-lg rounded-lg p-4 m-auto">
+      <Pie data={pieData} options={pieOptions as any} />
+    </div>
+  );
 };

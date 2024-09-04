@@ -1,4 +1,4 @@
-export default function Sobre() {
+export default function Blog() {
   return (
     <main className="text-center py-20">
       <section className="my-20">

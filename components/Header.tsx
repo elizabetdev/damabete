@@ -17,7 +17,7 @@ export const Header = () => {
   const navItems = [
     { text: "Sobre", href: "/sobre" },
     // { text: "Projectos", href: "/projectos" },
-    { text: "Destaques", href: "/destaques" },
+    { text: "Blog", href: "/blog" },
     // { text: "Contactos", href: "/contactos" },
   ];
 

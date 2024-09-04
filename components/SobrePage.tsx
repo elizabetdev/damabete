@@ -1,8 +1,6 @@
 import React from "react";
 import { PageWrapper } from "./PageWrapper";
-import { destaques } from "@/data/destaques";
 import { PageTitle } from "./PageTitle";
-import { DestaquesList } from "./DestaquesList";
 import { Timeline } from "@/components/Timeline";
 
 export const SobrePage: React.FC = () => {
