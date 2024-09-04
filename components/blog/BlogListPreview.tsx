@@ -7,9 +7,12 @@ import { allPosts } from "content-collections";
 export const BlogListPreview: React.FC = () => {
   const postsRecents = allPosts
     .sort((a, b) => {
-      const dateA = new Date(a.date.split("-").reverse().join("-"));
-      const dateB = new Date(b.date.split("-").reverse().join("-"));
-      return dateB > dateA ? -1 : dateB < dateA ? 1 : 0;
+      const [dayA, monthA, yearA] = a.date.split("-").map(Number);
+      const [dayB, monthB, yearB] = b.date.split("-").map(Number);
+      return new Date(yearA, monthA - 1, dayA) >
+        new Date(yearB, monthB - 1, dayB)
+        ? 1
+        : -1;
     })
     .slice(0, 6);
 

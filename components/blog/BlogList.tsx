@@ -8,6 +8,30 @@ type BlogListProps = {
   posts: Post[];
 };
 
+function DateBadge({ date }: { date: string }) {
+  const [day, month, year] = date.split("-");
+  const months = [
+    "Jan",
+    "Fev",
+    "Mar",
+    "Abr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Set",
+    "Out",
+    "Nov",
+    "Dez",
+  ];
+
+  return (
+    <span>
+      {day} {months[parseInt(month) - 1]} {year}
+    </span>
+  );
+}
+
 export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
   const [selectedTag, setSelectedTag] = useState("all");
   const [filteredPosts, setFilteredPosts] = useState(posts);
@@ -47,51 +71,59 @@ export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
         ))}
       </div>
       <div className="flex flex-wrap -m-8">
-        {filteredPosts.map((item, index) => (
-          <a
-            key={index}
-            className="w-full md:w-1/3 p-8"
-            href={`/blog/${item._meta.path}`}
-          >
-            <div className="p-4 h-full bg-zinc-900 bg-opacity-70 rounded-xl text-left">
-              <div className="flex flex-col justify-between h-full">
-                <div className="mb-8">
-                  <div className="mb-9 w-full overflow-hidden rounded-2xl">
-                    <Image
-                      className="w-full transform hover:scale-105 transition ease-in-out duration-1000"
-                      src={item.image as any}
-                      alt={item.title as any}
-                      layout="responsive"
-                      width={700}
-                      height={475}
-                    />
+        {filteredPosts.map((item, index) =>
+          item.published ? (
+            <a
+              key={index}
+              className="w-full md:w-1/3 p-8"
+              href={`/blog/${item._meta.path}`}
+            >
+              <div className="p-4 h-full bg-zinc-900 bg-opacity-70 rounded-xl text-left">
+                <div className="flex flex-col justify-between h-full">
+                  <div className="mb-8">
+                    <div className="mb-9 w-full overflow-hidden rounded-2xl">
+                      <Image
+                        className="w-full transform hover:scale-105 transition ease-in-out duration-1000"
+                        src={item.image as any}
+                        alt={item.title as any}
+                        layout="responsive"
+                        width={700}
+                        height={475}
+                      />
+                    </div>
+
+                    <div className="flex flex-row gap-1 mb-3 text-sm text-zinc-400 text-xs">
+                      <span>
+                        {item.tags
+                          .map(
+                            (tag) =>
+                              `${tag.charAt(0).toUpperCase()}${tag.slice(1)}`
+                          )
+                          .join(", ")}
+                      </span>
+
+                      <span>&#9679;</span>
+
+                      <DateBadge date={item.date} />
+                    </div>
+
+                    <h3 className="text-lg font-medium font-heading leading-normal mb-3">
+                      {item.title}
+                    </h3>
+
+                    {typeof item.description === "string" ? (
+                      <p className="text-sm text-zinc-400 font-medium">
+                        {item.description}
+                      </p>
+                    ) : (
+                      item.description
+                    )}
                   </div>
-
-                  <div className="flex flex-row gap-4">
-                    <span className="mb-3 text-sm text-zinc-400 font-medium">
-                      {item.tags.join(", ")}
-                    </span>
-                    <span className="text-sm text-zinc-400 font-medium">
-                      {item.date}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-bold font-heading leading-normal">
-                    {item.title}
-                  </h3>
-
-                  {typeof item.description === "string" ? (
-                    <p className="mb-3 text-sm text-zinc-400 font-medium">
-                      {item.description}
-                    </p>
-                  ) : (
-                    item.description
-                  )}
                 </div>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          ) : null
+        )}
       </div>
     </div>
   );
