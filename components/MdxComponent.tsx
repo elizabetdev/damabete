@@ -1,4 +1,6 @@
 // @ts-nocheck
+"use client";
+
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +8,7 @@ import { useMDXComponent } from "@content-collections/mdx/react";
 import { PieChart as LivroHhTugaMulheresPieChart } from "@/components/projects/livroHhTugaMulheres/PieChart";
 import { ScatterPlot as LivroHhTugaMulheresScatterPlot } from "@/components/projects/livroHhTugaMulheres/ScatterPlot";
 import { LineChart as LivroHhTugaMulheresLineChart } from "@/components/projects/livroHhTugaMulheres/LineChart";
+import { TikTok, YouTube, Instagram } from "mdx-embed";
 
 function clsx(...args: any) {
   return args.filter(Boolean).join(" ");
@@ -14,7 +17,7 @@ const components = {
   h1: ({ className, ...props }) => (
     <h1
       className={clsx(
-        "mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
+        "mt-2 scroll-m-20 text-4xl font-bold tracking-tight text-rose-500",
         className
       )}
       {...props}
@@ -23,7 +26,7 @@ const components = {
   h2: ({ className, ...props }) => (
     <h2
       className={clsx(
-        "mt-10 scroll-m-20 border-b border-b-zinc-800 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
+        "mt-10 scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 text-rose-500 mb-4",
         className
       )}
       {...props}
@@ -76,7 +79,10 @@ const components = {
   ),
   p: ({ className, ...props }) => (
     <p
-      className={clsx("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={clsx(
+        "leading-7 [&:not(:first-child)]:mt-6 [&:last-of-type]:mb-6",
+        className
+      )}
       {...props}
     />
   ),
@@ -158,6 +164,9 @@ const components = {
   LivroHhTugaMulheresPieChart,
   LivroHhTugaMulheresScatterPlot,
   LivroHhTugaMulheresLineChart,
+  TikTok,
+  YouTube,
+  Instagram,
 };
 
 interface MdxProps {

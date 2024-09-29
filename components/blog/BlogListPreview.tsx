@@ -11,8 +11,8 @@ export const BlogListPreview: React.FC = () => {
       const [dayB, monthB, yearB] = b.date.split("-").map(Number);
       return new Date(yearA, monthA - 1, dayA) >
         new Date(yearB, monthB - 1, dayB)
-        ? 1
-        : -1;
+        ? -1
+        : 1;
     })
     .slice(0, 6);
 
@@ -20,8 +20,8 @@ export const BlogListPreview: React.FC = () => {
     <section className="pt-24 pb-36 bg-zinc-950 overflow-hidden ">
       <div className="container px-4 mx-auto">
         <SectionTitle
-          title="Novidades do Blog"
-          description="Acompanhe as últimas novidades sobre os meus shows, palestras e participações em eventos."
+          title="Blog"
+          description="Acompanha as últimas novidades sobre os meus shows, palestras e participações em eventos."
         />
 
         <BlogList posts={postsRecents} />

@@ -22,8 +22,9 @@ export const Footer = () => {
       <span className="block text-sm text-center text-white">
         © {currentYear} built with love by Dama Bete. This website is{" "}
         <Link
-          href="https://github.com/miukimiu/dama-bete"
+          href="https://github.com/miukimiu/damabete"
           className="text-rose-500 hover:underline"
+          target="_blank"
         >
           Open Source
         </Link>
