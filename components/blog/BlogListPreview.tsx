@@ -17,11 +17,11 @@ export const BlogListPreview: React.FC = () => {
     .slice(0, 6);
 
   return (
-    <section className="pt-24 pb-36 bg-zinc-950 overflow-hidden ">
+    <section className="pt-24 pb-24 bg-zinc-950 overflow-hidden ">
       <div className="container px-4 mx-auto">
         <SectionTitle
           title="Blog"
-          description="Acompanha as últimas novidades sobre os meus shows, palestras e participações em eventos."
+          description="Acompanha as últimas novidades sobre as minhas participações em eventos, entrevistas e artigos que tenho escrito."
         />
 
         <BlogList posts={postsRecents} />

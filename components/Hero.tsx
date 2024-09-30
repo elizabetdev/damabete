@@ -40,7 +40,7 @@ export const Hero = () => {
           backgroundImage="url(img/hero/8.jpg)"
         />
         <GridItem
-          gridArea="40 / 26 / 51 / 32"
+          gridArea="37 / 26 / 51 / 32"
           backgroundImage="url(img/hero/9.jpg)"
         />
         <GridItem
