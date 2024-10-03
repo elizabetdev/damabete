@@ -103,8 +103,8 @@ export const SobrePage: React.FC = () => {
             momentos, no Festival Musidanças, onde abri o concerto da Sara
             Tavares, fui considerada artista revelação pela revista Blitz. Foi
             ali que conheci o meu futuro manager e, pouco tempo depois, assinei
-            contrato com a Universal Music, através da qual lancei o álbum "De
-            Igual para Igual".
+            contrato com a Universal Music, através da qual lancei o álbum
+            &quot;De Igual para Igual&quot;.
           </p>
           <p>
             Nesse mesmo período, concluí a minha licenciatura em Gestão do Lazer
@@ -215,12 +215,12 @@ export const SobrePage: React.FC = () => {
           </h2>
           <p>
             Em 2018, o meu projeto open-source React Kawaii tornou-se trending
-            no GitHub, o que me levou a ganhar o prémio de "Fun Project of the
-            Year" na React Amsterdam. Foi um marco importante, que abriu portas
-            para falar em conferências de React.js por todo o mundo. A minha
-            primeira palestra foi em Las Vegas, e depois disso, os convites não
-            pararam. Falei em eventos desde Yerevan a Sofia, Amsterdão e Berlim,
-            entre muitos outros.
+            no GitHub, o que me levou a ganhar o prémio de &quot;Fun Project of
+            the Year&quot; na React Amsterdam. Foi um marco importante, que
+            abriu portas para falar em conferências de React.js por todo o
+            mundo. A minha primeira palestra foi em Las Vegas, e depois disso,
+            os convites não pararam. Falei em eventos desde Yerevan a Sofia,
+            Amsterdão e Berlim, entre muitos outros.
           </p>
           <p>
             Em algumas palestras, consegui conciliar a tecnologia com a música,
