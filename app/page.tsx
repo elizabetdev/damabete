@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import React from "react";
 import { BlogListPreview } from "@/components/blog/BlogListPreview";
 import { ScrollBasedTextFooter } from "@/components/ScrollBasedTextFooter";
+import { OpenSourceCta } from "@/components/OpenSourceCta";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
       <Hero />
       <BlogListPreview />
       <ScrollBasedTextFooter />
+
+      <OpenSourceCta />
     </main>
   );
 }
