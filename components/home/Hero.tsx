@@ -1,7 +1,7 @@
 "use client";
 import NextImage from "next/image";
-import { GridItem } from "./GridItem";
-import { SocialMediaList } from "./SocialMediaList";
+import { GridItem } from "../GridItem";
+import { SocialMediaList } from "../SocialMediaList";
 
 export const Hero = () => {
   return (

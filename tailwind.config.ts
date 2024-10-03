@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         syncopate: ["var(--font-syncopate)"],
+        marker: ["var(--font-permanentMarker)"],
       },
     },
   },
