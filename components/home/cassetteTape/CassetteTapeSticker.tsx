@@ -1,7 +1,13 @@
-import React from "react";
+import { FC } from "react";
 import { permanentMarker } from "@/utils/fonts";
 
-function CassetteTapeSticker({ title }) {
+type CassetteTapeStickerProps = {
+  title: string;
+};
+
+export const CassetteTapeSticker: FC<CassetteTapeStickerProps> = ({
+  title,
+}) => {
   return (
     <g id="shape-fa0af8d2-a9e4-8066-8002-b4ac041beefa">
       <g id="shape-fa0af8d2-a9e4-8066-8002-b4b395862a8b">
@@ -218,7 +224,6 @@ function CassetteTapeSticker({ title }) {
             lengthAdjust="spacingAndGlyphs"
             textDecoration="none solid rgb(28, 32, 34)"
             style={{
-              WebkitTextTransform: "none",
               textTransform: "none",
               whiteSpace: "pre",
             }}
@@ -229,6 +234,4 @@ function CassetteTapeSticker({ title }) {
       </g>
     </g>
   );
-}
-
-export default CassetteTapeSticker;
+};

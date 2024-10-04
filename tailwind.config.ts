@@ -12,6 +12,9 @@ const config: Config = {
         syncopate: ["var(--font-syncopate)"],
         marker: ["var(--font-permanentMarker)"],
       },
+      aspectRatio: {
+        "9/16": "9/16",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

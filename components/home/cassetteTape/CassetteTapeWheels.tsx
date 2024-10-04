@@ -1,7 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
 
-function CassetteTapeWheels({ isPlaying }) {
+type CassetteTapeWheelsProps = {
+  isPlaying: boolean;
+};
+
+export const CassetteTapeWheels: FC<CassetteTapeWheelsProps> = ({
+  isPlaying,
+}) => {
   const wheelVariants = {
     stopped: { rotate: [-0, -0] },
     playing: {
@@ -59,6 +65,4 @@ function CassetteTapeWheels({ isPlaying }) {
       </motion.g>
     </g>
   );
-}
-
-export default CassetteTapeWheels;
+};

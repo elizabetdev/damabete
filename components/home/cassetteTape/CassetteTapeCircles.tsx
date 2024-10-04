@@ -1,6 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 
-function CassetteTapeCircles({ isPlaying, initialRadius, ellipseRadius }) {
+type CassetteTapeCirclesProps = {
+  isPlaying: boolean;
+  initialRadius: number;
+  ellipseRadius: number;
+};
+
+export const CassetteTapeCircles: FC<CassetteTapeCirclesProps> = ({
+  isPlaying,
+  initialRadius,
+  ellipseRadius,
+}) => {
   const animation = isPlaying ? ellipseRadius : initialRadius;
 
   return (
@@ -41,6 +51,4 @@ function CassetteTapeCircles({ isPlaying, initialRadius, ellipseRadius }) {
       </g>
     </g>
   );
-}
-
-export default CassetteTapeCircles;
+};

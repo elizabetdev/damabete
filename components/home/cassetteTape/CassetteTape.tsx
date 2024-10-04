@@ -1,12 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
-import CassetteTapeControls from "./cassete-tape-controls";
-import CassetteTapeSticker from "./cassete-tape-sticker";
-import CassetteTapeWheels from "./cassete-tape-wheels";
-import CassetteTapeBackground from "./cassete-tape-background";
-import CassetteTapeCircles from "./cassete-tape-circles";
+import { CassetteTapeControls } from "./CassetteTapeControls";
+import { CassetteTapeSticker } from "./CassetteTapeSticker";
+import { CassetteTapeWheels } from "./CassetteTapeWheels";
+import { CassetteTapeBackground } from "./CassetteTapeBackground";
+import { CassetteTapeCircles } from "./CassetteTapeCircles";
 import LyricVisualizer from "./LyricVisualizer";
 
-const playlist = [
+type Track = {
+  title: string;
+  artist: string;
+  src: string;
+};
+
+const playlist: Track[] = [
   {
     title: "Fork This",
     artist: "Miuki Miu",
@@ -24,40 +30,39 @@ const playlist = [
   },
 ];
 
-export const CassetteTape = () => {
-  const [currentTrack, setCurrentTrack] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+export const CassetteTape: React.FC = () => {
+  const [currentTrack, setCurrentTrack] = useState<number>(0);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const initialRadius = 80;
-  const [ellipseRadius, setEllipseRadius] = useState(initialRadius);
+  const [ellipseRadius, setEllipseRadius] = useState<number>(initialRadius);
 
-  const audioRef = useRef();
-  const source = useRef();
-  const analyzer = useRef();
-  const animationController = useRef();
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const source = useRef<MediaElementAudioSourceNode | null>(null);
+  const analyzer = useRef<AnalyserNode | null>(null);
+  const animationController = useRef<number>(0);
 
   useEffect(() => {
     const handleAudioPlay = () => {
-      // 1. AudioContext: The code creates an AudioContext object, which is a fundamental component of the Web Audio API. This context is used to manage and control audio sources, effects, and more.
-      let audioContext = new AudioContext();
-      if (!source.current) {
-        // 2 .MediaElementSource: The code sets up an audio source using createMediaElementSource(). This method is part of the Web Audio API and is used to create a media element source node from an HTML audio or video element. In this case, it's used to create an audio source from the audioRef element.
+      const audioContext = new AudioContext();
+      if (!source.current && audioRef.current) {
         source.current = audioContext.createMediaElementSource(
           audioRef.current
         );
-
-        // 3. AnalyserNode: An AnalyserNode is created to analyze the audio data and extract frequency data. It's connected to the audio source.
         analyzer.current = audioContext.createAnalyser();
         source.current.connect(analyzer.current);
         analyzer.current.connect(audioContext.destination);
       }
-
       visualizeData();
     };
 
-    audioRef.current.addEventListener("play", handleAudioPlay);
+    if (audioRef.current) {
+      audioRef.current.addEventListener("play", handleAudioPlay);
+    }
 
     return () => {
-      audioRef.current.removeEventListener("play", handleAudioPlay);
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("play", handleAudioPlay);
+      }
       cancelAnimationFrame(animationController.current);
     };
   }, []);
@@ -65,46 +70,42 @@ export const CassetteTape = () => {
   const visualizeData = () => {
     animationController.current = requestAnimationFrame(visualizeData);
 
-    if (audioRef.current.paused) {
+    if (audioRef.current?.paused) {
       cancelAnimationFrame(animationController.current);
       return;
     }
 
-    // 4. Visualizing Audio Data: The visualizeData() function is called in a loop using requestAnimationFrame(). It extracts frequency data using getByteFrequencyData() from the AnalyserNode and updates some visual effects based on this data.
     const songData = new Uint8Array(140);
-    analyzer.current.getByteFrequencyData(songData);
+    analyzer.current?.getByteFrequencyData(songData);
 
     const average = getAverage(songData);
-
-    let radius = initialRadius + average * 0.1;
-    // radius = Math.min(radius, 100.5); // Limit radius to a maximum of 100
+    const radius = initialRadius + average * 0.1;
 
     setEllipseRadius(radius);
   };
 
-  const getAverage = (dataArray) => {
-    const sum = dataArray.reduce(
-      (accumulator, currentValue) => accumulator + currentValue,
-      0
-    );
-    const average = sum / dataArray.length;
-    return average;
+  const getAverage = (dataArray: Uint8Array) => {
+    const sum = dataArray.reduce((acc, value) => acc + value, 0);
+    return sum / dataArray.length;
   };
 
-  const playTrack = (trackIndex) => {
+  const playTrack = (trackIndex: number) => {
     setCurrentTrack(trackIndex);
-    audioRef.current.src = playlist[trackIndex].src;
-    audioRef.current.play();
-    setIsPlaying(true);
+    if (audioRef.current) {
+      audioRef.current.src = playlist[trackIndex].src;
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
   };
 
   const togglePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      const currentTrackIndex = currentTrack % playlist.length;
-      playTrack(currentTrackIndex);
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        playTrack(currentTrack % playlist.length);
+      }
     }
   };
 
@@ -128,9 +129,8 @@ export const CassetteTape = () => {
 
   useEffect(() => {
     const handleAudioPlay = () => {
-      let audioContext = new AudioContext();
-
-      if (!source.current) {
+      const audioContext = new AudioContext();
+      if (!source.current && audioRef.current) {
         source.current = audioContext.createMediaElementSource(
           audioRef.current
         );
@@ -138,7 +138,6 @@ export const CassetteTape = () => {
         source.current.connect(analyzer.current);
         analyzer.current.connect(audioContext.destination);
       }
-
       visualizeData();
     };
 
@@ -147,19 +146,22 @@ export const CassetteTape = () => {
       playTrack(nextIndex);
     };
 
-    // 5. Event Listeners: Event listeners are added to the audio element to handle events such as "play" and "ended." These event listeners are used to trigger certain actions related to audio playback.
-    audioRef.current.addEventListener("play", handleAudioPlay);
-    audioRef.current.addEventListener("ended", handleAudioEnd);
+    if (audioRef.current) {
+      audioRef.current.addEventListener("play", handleAudioPlay);
+      audioRef.current.addEventListener("ended", handleAudioEnd);
+    }
 
     return () => {
-      audioRef.current.removeEventListener("play", handleAudioPlay);
-      audioRef.current.removeEventListener("ended", handleAudioEnd);
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("play", handleAudioPlay);
+        audioRef.current.removeEventListener("ended", handleAudioEnd);
+      }
       cancelAnimationFrame(animationController.current);
     };
   }, [currentTrack]);
 
-  const currentTime = audioRef.current && audioRef.current.currentTime;
-  const duration = audioRef.current && audioRef.current.duration;
+  const currentTime = audioRef.current?.currentTime;
+  const duration = audioRef.current?.duration;
 
   return (
     <div className="flex flex-col gap-4">
@@ -184,9 +186,7 @@ export const CassetteTape = () => {
           <CassetteTapeSticker
             title={`${playlist[currentTrack].artist} - ${playlist[currentTrack].title}`}
           />
-
           <CassetteTapeWheels isPlaying={isPlaying} />
-
           <CassetteTapeControls
             nextTrack={nextTrack}
             prevTrack={prevTrack}
@@ -196,9 +196,9 @@ export const CassetteTape = () => {
         </svg>
         <audio ref={audioRef} />
         <LyricVisualizer
-          currentTime={currentTime}
+          currentTime={currentTime || 0}
           ellipseRadius={ellipseRadius}
-          duration={duration}
+          duration={duration || 0}
         />
       </div>
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { lyrics } from "@/data/lyrics";
+import { lyrics } from "@/data/forkThisLyric";
 import { permanentMarker } from "@/utils/fonts";
 
 interface LyricVisualizerProps {

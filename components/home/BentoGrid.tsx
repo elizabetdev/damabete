@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { CardWithEffect } from "../CardWithEffect";
 import { SectionTitle } from "../SectionTitle";
 import { Spotify } from "../Spotify";
-import { CassetteTape } from "./k7/CassetteTape";
+import { CassetteTape } from "./cassetteTape/CassetteTape";
+import { HeroVideo } from "./HeroVideo";
 
 export const BentoGrid = () => {
   const chartRef = useRef(null);
@@ -55,19 +55,20 @@ export const BentoGrid = () => {
                 <Spotify link="https://open.spotify.com/album/4hGIIxldD6HlmorHszswoL?si=IPAHik8nQ0eMUKky67HqVQ" />
 
                 <article className="prose dark:prose-invert p-4">
-                  <h2>Cassette Tape</h2>
+                  <h2>De igual para igual</h2>
                   <p>Um projecto que </p>
                 </article>
               </div>
             </CardWithEffect>
 
-            <Spotify
-              wide
-              link="https://open.spotify.com/album/4fiUzPGD9c9BOGxyJl61J5?si=f0MXr8FySamKRCnEIai4AQ"
-            />
-
             <CardWithEffect>
-              <div>Ops</div>
+              <HeroVideo
+                className=" block"
+                animationStyle="from-center"
+                videoSrc="https://www.youtube.com/embed/V4-PQP__65o"
+                thumbnailSrc="/img/video/bento-video.png"
+                thumbnailAlt="Hero Video"
+              />
 
               <article className="prose dark:prose-invert p-4">
                 <h2>Talks</h2>

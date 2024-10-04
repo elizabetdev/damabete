@@ -1,11 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 
-function CassetteTapeControls({
+interface CassetteTapeControlsProps {
+  nextTrack: () => void;
+  prevTrack: () => void;
+  isPlaying: boolean;
+  togglePlayPause: () => void;
+}
+
+export const CassetteTapeControls: FC<CassetteTapeControlsProps> = ({
   nextTrack,
   prevTrack,
   isPlaying,
   togglePlayPause,
-}) {
+}) => {
   return (
     <>
       <g id="next-btn" fill="#000" onClick={nextTrack}>
@@ -490,6 +497,4 @@ function CassetteTapeControls({
       </g>
     </>
   );
-}
-
-export default CassetteTapeControls;
+};

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CassetteTapeBackground() {
+export const CassetteTapeBackground = () => {
   return (
     <g>
       <g>
@@ -263,6 +263,4 @@ function CassetteTapeBackground() {
       </g>
     </g>
   );
-}
-
-export default CassetteTapeBackground;
+};

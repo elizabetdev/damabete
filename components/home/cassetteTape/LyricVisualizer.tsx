@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { lyrics } from "./lyrics";
+import { forkThisLyric } from "@/data/forkThisLyric";
 
-function LyricVisualizer({ currentTime, ellipseRadius, duration }) {
-  const [currentLyric, setCurrentLyric] = useState(0);
+interface LyricVisualizerProps {
+  currentTime: number;
+  ellipseRadius: number;
+  duration: number;
+}
+
+function LyricVisualizer({
+  currentTime,
+  ellipseRadius,
+  duration,
+}: LyricVisualizerProps) {
+  const [currentLyric, setCurrentLyric] = useState<string>("");
 
   useEffect(() => {
     const lyric = findLyricByTime(currentTime, duration);
@@ -25,12 +35,18 @@ function LyricVisualizer({ currentTime, ellipseRadius, duration }) {
 
 export default LyricVisualizer;
 
-function findLyricByTime(currentTime, duration) {
-  const lyricsWithEndTime = lyrics.map((item, i) => {
-    if (i <= lyrics.length - 2) {
+interface LyricWithEndTime {
+  start: number;
+  end: number;
+  lyric: string;
+}
+
+function findLyricByTime(currentTime: number, duration: number): string {
+  const lyricsWithEndTime: LyricWithEndTime[] = forkThisLyric.map((item, i) => {
+    if (i <= forkThisLyric.length - 2) {
       return {
         start: item.start,
-        end: lyrics[i + 1].start,
+        end: forkThisLyric[i + 1].start,
         lyric: item.lyric,
       };
     } else {
@@ -45,11 +61,13 @@ function findLyricByTime(currentTime, duration) {
 
   currentTime = Number(currentTime);
 
-  for (var i = 0; i < lyrics.length; i++) {
+  for (var i = 0; i < forkThisLyric.length; i++) {
     const lyricObj = lyricsWithEndTime[i];
 
     if (currentTime < lyricObj?.end && currentTime > lyricObj?.start) {
       return lyricObj.lyric;
     }
   }
+
+  return "";
 }
