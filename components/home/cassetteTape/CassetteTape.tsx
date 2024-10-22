@@ -201,11 +201,6 @@ export const CassetteTape: React.FC = () => {
           duration={duration || 0}
         />
       </div>
-
-      <article className="prose dark:prose-invert p-4">
-        <h2>Cassette Tape</h2>
-        <p>Um projecto que </p>
-      </article>
     </div>
   );
 };

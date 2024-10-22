@@ -44,7 +44,7 @@ export function CardWithEffect({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex overflow-hidden rounded-xl bg-zinc-900 p-4 border border-zinc-800",
+        "group relative flex overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800",
         className
       )}
     >

@@ -6,7 +6,7 @@ import NextImage from "next/image";
 export const SobrePage: React.FC = () => {
   return (
     <PageWrapper>
-      <article className="prose prose-lg dark:prose-invert mx-auto">
+      <article className="prose prose-lg prose-invert mx-auto">
         <PageTitle title="Sobre" className="text-left" />
 
         <section>
