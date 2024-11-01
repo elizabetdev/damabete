@@ -44,11 +44,11 @@ export function CardWithEffect({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800",
+        "group relative flex overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800 w-full",
         className
       )}
     >
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 w-full">{children}</div>
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{

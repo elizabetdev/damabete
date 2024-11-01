@@ -32,7 +32,6 @@ export const Spotify = ({
       allow={allow}
       style={{
         borderRadius: 8,
-        maxWidth: "300px",
         ...style,
       }}
       {...props}

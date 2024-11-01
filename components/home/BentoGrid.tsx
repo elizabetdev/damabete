@@ -8,35 +8,6 @@ import { CardVideo } from "../CardVideo";
 import Link from "next/link";
 
 export const BentoGrid = () => {
-  const chartRef = useRef(null);
-  const [isChartVisible, setIsChartVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsChartVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    if (chartRef.current) {
-      observer.observe(chartRef.current);
-    }
-
-    return () => {
-      if (chartRef.current) {
-        observer.unobserve(chartRef.current);
-      }
-    };
-  }, [chartRef]);
-
   return (
     <section className="pt-24 pb-24 bg-zinc-950 overflow-hidden">
       <div className="container px-4 mx-auto">
@@ -45,8 +16,8 @@ export const BentoGrid = () => {
           description="Acompanha as últimas novidades sobre as minhas participações em eventos, entrevistas e artigos que tenho escrito."
         />
 
-        <div className="flex flex-col md:flex-row gap-4 w-full">
-          <CardWithEffect>
+        <div className="flex flex-col lg:flex-row gap-4 w-full ">
+          <CardWithEffect className="lg:max-w-2xl">
             <CassetteTape />
 
             <article className="p-4 prose prose-md prose-invert pt-8">
@@ -66,12 +37,21 @@ export const BentoGrid = () => {
             </article>
           </CardWithEffect>
 
-          <div className="flex flex-col w-full md:w-1/2 gap-5 h-full md:h-[800px]">
+          <div className="flex flex-col w-full lg:w-1/2 gap-5 h-full md:h-[800px]">
             <CardWithEffect>
-              <div className="flex flex-row gap-4 h-full w-full">
-                <Spotify link="https://open.spotify.com/album/4hGIIxldD6HlmorHszswoL?si=IPAHik8nQ0eMUKky67HqVQ" />
+              <div className="flex flex-col xl:flex-row gap-4 h-full w-full">
+                <Spotify
+                  link="https://open.spotify.com/album/4hGIIxldD6HlmorHszswoL?si=IPAHik8nQ0eMUKky67HqVQ"
+                  className="hidden xl:block max-w-[50%]"
+                />
 
-                <article className="p-4 prose prose-md prose-invert pt-8">
+                <Spotify
+                  wide
+                  link="https://open.spotify.com/album/4hGIIxldD6HlmorHszswoL?si=IPAHik8nQ0eMUKky67HqVQ"
+                  className="xl:hidden max-w-[100%]"
+                />
+
+                <article className="p-4 prose prose-md prose-invert xl:pt-8">
                   <h2>De igual para igual</h2>
                   <p>
                     De Igual para Igual é o álbum de estreia de Dama Bete.

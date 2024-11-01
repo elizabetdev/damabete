@@ -165,7 +165,7 @@ export const CassetteTape: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col bg-indigo-700 rounded-xl">
+      <div className="flex flex-col bg-indigo-700 rounded-xl w-full justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="cassette-tape"
