@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { lyrics } from "@/data/forkThisLyric";
+import { forkThisLyric } from "@/data/forkThisLyric";
 import { permanentMarker } from "@/utils/fonts";
 
 interface LyricVisualizerProps {
@@ -49,11 +49,11 @@ export const LyricVisualizer: React.FC<LyricVisualizerProps> = ({
 export default LyricVisualizer;
 
 function findLyricByTime(currentTime: number, duration: number): string {
-  const lyricsWithEndTime: Lyric[] = lyrics.map((item, i) => {
-    if (i <= lyrics.length - 2) {
+  const forkThisLyricWithEndTime: Lyric[] = forkThisLyric.map((item, i) => {
+    if (i <= forkThisLyric.length - 2) {
       return {
         start: item.start,
-        end: lyrics[i + 1].start,
+        end: forkThisLyric[i + 1].start,
         lyric: item.lyric,
       };
     } else {
@@ -68,8 +68,8 @@ function findLyricByTime(currentTime: number, duration: number): string {
 
   currentTime = Number(currentTime);
 
-  for (let i = 0; i < lyricsWithEndTime.length; i++) {
-    const lyricObj = lyricsWithEndTime[i];
+  for (let i = 0; i < forkThisLyricWithEndTime.length; i++) {
+    const lyricObj = forkThisLyricWithEndTime[i];
 
     if (currentTime < lyricObj.end && currentTime > lyricObj.start) {
       return lyricObj.lyric;
