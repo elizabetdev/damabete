@@ -5,7 +5,7 @@ import { SectionTitle } from "../SectionTitle";
 import { Spotify } from "../Spotify";
 import { CassetteTape } from "./cassetteTape/CassetteTape";
 import { CardVideo } from "../CardVideo";
-import { Ripple } from "../Ripple";
+import Link from "next/link";
 
 export const BentoGrid = () => {
   const chartRef = useRef(null);
@@ -49,9 +49,20 @@ export const BentoGrid = () => {
           <CardWithEffect>
             <CassetteTape />
 
-            <article className="p-4 prose prose-lg prose-invert">
-              <h2>De igual para igual</h2>
-              <p>Um projecto que </p>
+            <article className="p-4 prose prose-md prose-invert pt-8">
+              <h2>Fork this - Song</h2>
+              <p>
+                “Fork This” é uma música que foi lançada em Mar 8, 2020 como
+                objetivo encorajar mulheres da tech a seguirem a sua paixão.
+                Superar o síndrome do impostor é uma luta, mas, se simplesmente
+                continuares, podes alcançar tudo o que desejares. O código da
+                cassette foi feito por mim e para quem tem curiosidade o código
+                encontra-se no{" "}
+                <Link href="https://github.com/miukimiu/penpot-fork-this">
+                  GitHub
+                </Link>
+                .
+              </p>
             </article>
           </CardWithEffect>
 
@@ -60,11 +71,14 @@ export const BentoGrid = () => {
               <div className="flex flex-row gap-4 h-full w-full">
                 <Spotify link="https://open.spotify.com/album/4hGIIxldD6HlmorHszswoL?si=IPAHik8nQ0eMUKky67HqVQ" />
 
-                <article className="p-4 prose prose-lg prose-invert">
+                <article className="p-4 prose prose-md prose-invert pt-8">
                   <h2>De igual para igual</h2>
                   <p>
-                    Muitas pessoas fazem esta pergunta e este vídeo é a
-                    resposta.
+                    De Igual para Igual é o álbum de estreia de Dama Bete.
+                    Lançado a 16 de julho de 2008, pela Universal Music
+                    Portugal, foi o primeiro álbum a solo de uma rapper
+                    portuguesa editado por um grande grupo de edição
+                    discográfica
                   </p>
                 </article>
               </div>
@@ -74,6 +88,7 @@ export const BentoGrid = () => {
               title="O que aconteceu, à Dama Bete"
               description="Muitas pessoas fazem esta pergunta e este vídeo é a resposta."
               videoSrc="https://www.youtube.com/embed/V4-PQP__65o"
+              overlayImageSrc="/img/video/bento-video.jpg"
             />
           </div>
         </div>

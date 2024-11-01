@@ -13,7 +13,6 @@ export default function Home() {
       <BentoGrid />
       <BlogListPreview />
       <ScrollBasedTextFooter />
-      <OpenSourceCta />
     </main>
   );
 }
