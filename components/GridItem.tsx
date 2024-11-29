@@ -50,7 +50,7 @@ export const GridItem: FC<GridItemProps> = ({ gridArea, backgroundImage }) => {
 
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden rounded-lg"
       style={{ gridArea: gridArea, x: tx, y: ty }}
     >
       <div

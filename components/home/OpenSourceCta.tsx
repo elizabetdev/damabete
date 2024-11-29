@@ -28,7 +28,7 @@ export const OpenSourceCta = async (props: OpenSourceCtaProps) => {
       </p>
       <div className="mt-10 flex justify-center space-x-2">
         <Link
-          href="https://github.com/miukimiu/damabete"
+          href="https://github.com/elizabetdev/damabete"
           target="_blank"
           rel="noreferrer"
           className="group flex"

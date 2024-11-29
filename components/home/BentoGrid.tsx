@@ -29,7 +29,7 @@ export const BentoGrid = () => {
                 continuares, podes alcançar tudo o que desejares. O código da
                 cassette foi feito por mim e para quem tem curiosidade o código
                 encontra-se no{" "}
-                <Link href="https://github.com/miukimiu/penpot-fork-this">
+                <Link href="https://github.com/elizabetdev/penpot-fork-this">
                   GitHub
                 </Link>
                 .
@@ -39,7 +39,7 @@ export const BentoGrid = () => {
 
           <div className="flex flex-col w-full lg:w-1/2 gap-5 h-full md:h-[800px]">
             <CardWithEffect>
-              <div className="flex flex-col xl:flex-row gap-4 h-full w-full">
+              <div className="flex flex-col xl:flex-row gap-4 h-full w-full p-4">
                 <Spotify
                   link="https://open.spotify.com/album/4hGIIxldD6HlmorHszswoL?si=IPAHik8nQ0eMUKky67HqVQ"
                   className="hidden xl:block max-w-[50%]"

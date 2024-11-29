@@ -37,7 +37,7 @@ export const SocialMediaList: FC<SocialMediaListProps> = ({
       </li>
       <li>
         <Link
-          href="https://x.com/miuki_miu"
+          href="https://x.com/elizabet_dev"
           className="text-white hover:text-rose-500"
           target="_blank"
         >
@@ -55,7 +55,7 @@ export const SocialMediaList: FC<SocialMediaListProps> = ({
       </li>
       <li>
         <Link
-          href="https://github.com/miukimiu/"
+          href="https://github.com/elizabetdev/"
           className="text-white hover:text-rose-500"
           target="_blank"
         >
