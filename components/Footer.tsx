@@ -1,13 +1,6 @@
 "use client";
 import Link from "next/link";
 import NextImage from "next/image";
-import {
-  FaInstagram,
-  FaTiktok,
-  FaXTwitter,
-  FaGithub,
-  FaSpotify,
-} from "react-icons/fa6";
 import { SocialMediaList } from "./SocialMediaList";
 
 export const Footer = () => {

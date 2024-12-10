@@ -12,7 +12,7 @@ export const SobrePage: React.FC = () => {
         <section>
           <p className="lead">
             Hey! O meu nome é Elizabet, mas muitos conhecem-me por Dama Bete.
-            Sou uma rapper luso-moçambicana e também product designer. A minha
+            Sou uma rapper luso-moçambicana e também design engineer. A minha
             vida tem sido uma jornada entre dois mundos que, à primeira vista,
             podem parecer opostos – a música e a tecnologia. Mas para mim,
             sempre estiveram conectados. Do palco para o código, da poesia
@@ -241,8 +241,8 @@ export const SobrePage: React.FC = () => {
             Reconciliação com a música e tecnologia
           </h2>
           <p>
-            Hoje em dia, considero-me uma artista multidisciplinar. Sou product
-            designer, rapper e desenvolvedora. Finalmente encontrei o equilíbrio
+            Hoje em dia, considero-me uma artista multidisciplinar. Sou design
+            engineer, rapper e desenvolvedora. Finalmente encontrei o equilíbrio
             entre a música e a tecnologia, duas paixões que me definem, e é
             através delas que consigo expressar quem sou em todos os meus
             projetos.

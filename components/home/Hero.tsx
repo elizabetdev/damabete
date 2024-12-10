@@ -28,7 +28,7 @@ export const Hero = () => {
           backgroundImage="url(img/hero/5.jpg)"
         />
         <GridItem
-          gridArea="18 / 42 / 33 / 50"
+          gridArea="18 / 35 / 33 / 43"
           backgroundImage="url(img/hero/6.jpg)"
         />
         <GridItem
@@ -36,7 +36,7 @@ export const Hero = () => {
           backgroundImage="url(img/hero/7.jpg)"
         />
         <GridItem
-          gridArea="36 / 12 / 46 / 22"
+          gridArea="36 / 12 / 56 / 22"
           backgroundImage="url(img/hero/8.jpg)"
         />
         <GridItem

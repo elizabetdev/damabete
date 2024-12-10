@@ -2,9 +2,9 @@ import Link from "next/link";
 import {
   FaInstagram,
   FaTiktok,
-  FaXTwitter,
   FaGithub,
   FaSpotify,
+  FaBluesky,
 } from "react-icons/fa6";
 import { FC } from "react";
 
@@ -16,7 +16,7 @@ export const SocialMediaList: FC<SocialMediaListProps> = ({
   iconSize = 24,
 }) => {
   return (
-    <ul className="flex justify-center mt-5 space-x-5">
+    <ul className="flex justify-center mt-5 space-x-6">
       <li>
         <Link
           href="https://www.instagram.com/damabete/"
@@ -37,15 +37,6 @@ export const SocialMediaList: FC<SocialMediaListProps> = ({
       </li>
       <li>
         <Link
-          href="https://x.com/elizabet_dev"
-          className="text-white hover:text-rose-500"
-          target="_blank"
-        >
-          <FaXTwitter size={iconSize} />
-        </Link>
-      </li>
-      <li>
-        <Link
           href="https://open.spotify.com/artist/0cFnYwwUg1OWV2AksuN22j?si=h-DeBOgBQoSzulZql0On3Q"
           className="text-white hover:text-rose-500"
           target="_blank"
@@ -60,6 +51,15 @@ export const SocialMediaList: FC<SocialMediaListProps> = ({
           target="_blank"
         >
           <FaGithub size={iconSize} />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="https://x.com/elizabet_dev"
+          className="text-white hover:text-rose-500"
+          target="_blank"
+        >
+          <FaBluesky size={iconSize} />
         </Link>
       </li>
     </ul>

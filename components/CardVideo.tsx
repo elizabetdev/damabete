@@ -27,7 +27,7 @@ export const CardVideo: React.FC<CardVideoProps> = ({
   return (
     <>
       <button
-        className="group relative overflow-hidden cursor-pointer flex w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-zinc-900 p-4 border border-zinc-800 h-1/2"
+        className="group relative overflow-hidden cursor-pointer flex w-full flex-col items-center justify-center rounded-xl bg-zinc-900 p-4 border border-zinc-800 lg:h-1/2 h-[300px]"
         onClick={() => setIsOpen(true)}
       >
         {/* Imagem de Overlay com Efeito Zoom */}

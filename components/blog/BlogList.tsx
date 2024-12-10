@@ -6,6 +6,7 @@ import { Post } from "content-collections";
 
 type BlogListProps = {
   posts: Post[];
+  hideFilters?: boolean;
 };
 
 function DateBadge({ date }: { date: string }) {
@@ -32,7 +33,10 @@ function DateBadge({ date }: { date: string }) {
   );
 }
 
-export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
+export const BlogList: React.FC<BlogListProps> = ({
+  posts,
+  hideFilters = false,
+}) => {
   const [selectedTag, setSelectedTag] = useState("all");
   const [filteredPosts, setFilteredPosts] = useState(posts);
 
@@ -49,35 +53,34 @@ export const BlogList: React.FC<BlogListProps> = ({ posts }) => {
 
   return (
     <div>
-      <div className="flex flex-wrap mb-8">
-        <button
-          className={`mr-4 py-2 px-4 rounded-lg ${
-            selectedTag === "all" ? "bg-rose-500 text-white" : "bg-zinc-900"
-          }`}
-          onClick={() => handleTagClick("all")}
-        >
-          Todos
-        </button>
-        {uniqueTags.map((tag) => (
+      {!hideFilters && (
+        <div className="flex flex-wrap mb-8">
           <button
-            key={tag}
             className={`mr-4 py-2 px-4 rounded-lg ${
-              selectedTag === tag ? "bg-rose-500 text-white" : "bg-zinc-900"
+              selectedTag === "all" ? "bg-rose-500 text-white" : "bg-zinc-900"
             }`}
-            onClick={() => handleTagClick(tag)}
+            onClick={() => handleTagClick("all")}
           >
-            {`${tag.charAt(0).toUpperCase()}${tag.slice(1)}`}
+            Todos
           </button>
-        ))}
-      </div>
-      <div className="flex flex-wrap -m-8">
+          {uniqueTags.map((tag) => (
+            <button
+              key={tag}
+              className={`mr-4 py-2 px-4 rounded-lg ${
+                selectedTag === tag ? "bg-rose-500 text-white" : "bg-zinc-900"
+              }`}
+              onClick={() => handleTagClick(tag)}
+            >
+              {`${tag.charAt(0).toUpperCase()}${tag.slice(1)}`}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredPosts.map((item, index) =>
           item.published ? (
-            <a
-              key={index}
-              className="w-full md:w-1/3 p-8"
-              href={`/blog/${item._meta.path}`}
-            >
+            <a key={index} className="w-full" href={`/blog/${item._meta.path}`}>
               <div className="p-4 h-full bg-zinc-900 bg-opacity-70 rounded-xl text-left">
                 <div className="flex flex-col justify-between h-full">
                   <div className="mb-8">

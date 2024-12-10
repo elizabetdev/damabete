@@ -169,8 +169,7 @@ export const CassetteTape: React.FC = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="cassette-tape"
-          width="655"
-          height="442"
+          className="w-full h-auto"
           fill="none"
           style={{ WebkitPrintColorAdjust: "exact" }}
           version="1.1"

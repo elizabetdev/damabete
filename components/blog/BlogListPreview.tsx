@@ -24,7 +24,7 @@ export const BlogListPreview: React.FC = () => {
           description="Acompanha as últimas novidades sobre as minhas participações em eventos, entrevistas e artigos que tenho escrito."
         />
 
-        <BlogList posts={postsRecents} />
+        <BlogList posts={postsRecents} hideFilters={true} />
 
         <div className="flex justify-center mt-12">
           <Link
