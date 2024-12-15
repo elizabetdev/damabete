@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.9",
-    "@next/third-parties": "^14.2.5",
+    "@vercel/analytics": "^1.4.1",
     "chart.js": "^4.4.3",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",

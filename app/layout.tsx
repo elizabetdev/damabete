@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 import { inter } from "@/utils/fonts";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Dama Bete",
@@ -24,11 +24,10 @@ export default function RootLayout({
           <Header />
           <div className="absolute inset-0 bg-noise opacity-30 z-20 pointer-events-none"></div>
           {children}
-
           <Footer />
+          <Analytics />
         </div>
       </body>
-      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
