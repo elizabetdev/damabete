@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Dama Bete: Rapper, Award-Winning Design Engineer, Tech Speaker",
 };
 
-const gaId = (process.env.GA_ID as string) || "";
+const gaId = (process.env.NEXT_PUBLIC_GA_ID as string) || "";
 
 export default function RootLayout({
   children,
