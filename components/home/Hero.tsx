@@ -23,10 +23,7 @@ export const Hero = () => {
           gridArea="13 / 11 / 32 / 18"
           backgroundImage="url(img/hero/4.jpg)"
         />
-        <GridItem
-          gridArea="17 / 32 / 32 / 38"
-          backgroundImage="url(img/hero/5.jpg)"
-        />
+
         <GridItem
           gridArea="18 / 35 / 33 / 43"
           backgroundImage="url(img/hero/6.jpg)"

@@ -7,7 +7,6 @@ import {
   DialogPanel,
 } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
-import { Ripple } from "./Ripple";
 
 interface CardVideoProps {
   title: string;
@@ -35,8 +34,9 @@ export const CardVideo: React.FC<CardVideoProps> = ({
           <Image
             src={overlayImageSrc}
             alt={title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="opacity-40"
           />
         </div>

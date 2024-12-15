@@ -89,9 +89,9 @@ export const BlogList: React.FC<BlogListProps> = ({
                         className="w-full transform hover:scale-105 transition ease-in-out duration-1000"
                         src={item.image as any}
                         alt={item.title as any}
-                        layout="responsive"
                         width={700}
                         height={475}
+                        style={{ height: "auto", width: "100%" }}
                       />
                     </div>
 
