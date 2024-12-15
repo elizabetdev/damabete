@@ -12,6 +12,10 @@ const config: Config = {
         syncopate: ["var(--font-syncopate)"],
         marker: ["var(--font-permanentMarker)"],
       },
+      colors: {
+        accent: "var(--accent)",
+        background: "var(--background)",
+      },
       aspectRatio: {
         "9/16": "9/16",
       },

@@ -55,7 +55,7 @@ export const SocialMediaList: FC<SocialMediaListProps> = ({
       </li>
       <li>
         <Link
-          href="https://x.com/elizabet_dev"
+          href="https://bsky.app/profile/elizabet.dev"
           className="text-white hover:text-rose-500"
           target="_blank"
         >

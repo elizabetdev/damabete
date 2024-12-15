@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  /* zinc 950 */
+  --background: #09090b;
   --accent: #fd2c5b;
   --text: white;
 }
@@ -13,7 +13,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   /* zinc 950 */
-  background: #09090b;
+  background: var(--background);
 }
 
 @layer utilities {
