@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Dama Bete: Rapper, Award-Winning Design Engineer, Tech Speaker",
 };
 
+const gaId = (process.env.NEXT_PUBLIC_GA_ID as string) || "";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,7 +28,7 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
-      <GoogleAnalytics gaId="G-60LHJ27B3Z" />
+      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
