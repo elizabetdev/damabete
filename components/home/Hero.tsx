@@ -5,8 +5,8 @@ import { SocialMediaList } from "../SocialMediaList";
 
 export const Hero = () => {
   return (
-    <div className="content flex flex-col flex-1 w-full relative items-center justify-center max-h-[800px] min-h-screen px-4">
-      <div className="grid pointer-events-none absolute w-[200%] lg:w-[110%] h-[100%] top-0 left-0 grid grid-cols-[repeat(50,2%)] grid-rows-[repeat(50,2%)] opacity-70 grayscale-[20%]">
+    <div className="content flex flex-col flex-1 w-full relative items-center justify-center md:min-h-screen min-h-[480px] px-4 mt-20">
+      <div className="pointer-events-none absolute w-[200%] lg:w-[110%] h-[100%] top-0 left-0 grid grid-cols-[repeat(50,2%)] grid-rows-[repeat(50,2%)] opacity-70 grayscale-[20%]">
         <GridItem
           gridArea="10 / 1 / 26 / 7"
           backgroundImage="url(img/hero/1.jpg)"

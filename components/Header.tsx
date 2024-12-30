@@ -29,7 +29,7 @@ export const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center h-24 container mx-auto px-4 text-white w-full z-50`}
+      className={`flex justify-between items-center h-20 container mx-auto px-4 text-white w-full z-50 fixed bg-zinc-950`}
     >
       {/* Logo */}
       <h1 className="w-full">
