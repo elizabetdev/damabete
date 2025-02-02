@@ -6,11 +6,17 @@ import { Footer } from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Dama Bete",
+  title: "Dama Bete - A primeira dama do rap",
   description: "Dama Bete: Rapper, Award-Winning Design Engineer, Tech Speaker",
+  openGraph: {
+    images: [
+      {
+        url: "https://damabete.com/open-graph.png",
+        alt: "Dama Bete - A primeira dama do rap",
+      },
+    ],
+  },
 };
-
-const gaId = (process.env.NEXT_PUBLIC_GA_ID as string) || "";
 
 export default function RootLayout({
   children,

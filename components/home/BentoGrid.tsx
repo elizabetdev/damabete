@@ -1,5 +1,4 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
 import { CardWithEffect } from "../CardWithEffect";
 import { SectionTitle } from "../SectionTitle";
 import { Spotify } from "../Spotify";
@@ -23,12 +22,12 @@ export const BentoGrid = () => {
             <article className="p-4 prose prose-md prose-invert pt-8">
               <h2>Fork this - Song</h2>
               <p>
-                “Fork This” é uma música que foi lançada em Mar 8, 2020 como
-                objetivo encorajar mulheres da tech a seguirem a sua paixão.
-                Superar o síndrome do impostor é uma luta, mas, se simplesmente
-                continuares, podes alcançar tudo o que desejares. O código da
-                cassette foi feito por mim e para quem tem curiosidade o código
-                encontra-se no{" "}
+                “Fork This” é uma música que foi lançada a 8 de Março de 2020
+                como objetivo encorajar mulheres da tech a seguirem a sua
+                paixão. Superar o síndrome do impostor é uma luta, mas, se
+                simplesmente continuares, podes alcançar tudo o que desejares. O
+                código da cassette foi feito por mim e para quem tem curiosidade
+                o código encontra-se no{" "}
                 <Link href="https://github.com/elizabetdev/penpot-fork-this">
                   GitHub
                 </Link>

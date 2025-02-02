@@ -227,10 +227,9 @@ const data = [
         />
         <p>
           Hoje em dia, considero-me uma artista multidisciplinar. Sou design
-          engineer, rapper e desenvolvedora. Finalmente encontrei o equilíbrio
-          entre a música e a tecnologia, duas paixões que me definem, e é
-          através delas que consigo expressar quem sou em todos os meus
-          projetos.
+          engineer, rapper e coder. Finalmente encontrei o equilíbrio entre a
+          música e a tecnologia, duas paixões que me definem, e é através delas
+          que consigo expressar quem sou em todos os meus projetos.
         </p>
       </section>
     ),
