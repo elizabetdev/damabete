@@ -6,16 +6,16 @@ import { Analytics } from "@vercel/analytics/react";
 import { Inter, Permanent_Marker } from "next/font/google";
 import localFont from "next/font/local";
 
-export const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-export const permanentMarker = Permanent_Marker({
+const permanentMarker = Permanent_Marker({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
   variable: "--font-marker",
 });
 
-export const heading = localFont({
+const heading = localFont({
   src: "./fonts/miedinger-w01-bold.ttf",
   variable: "--font-heading",
   display: "swap",
