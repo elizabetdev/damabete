@@ -43,7 +43,7 @@ export const Header = () => {
           {navItems.map((item, i) => (
             <li
               key={i}
-              className="p-4 hover:text-[--accent]  m-2 cursor-pointer duration-300"
+              className="pt-4 ml-8 hover:text-[--accent] cursor-pointer duration-300"
             >
               <Link href={item.href}>{item.text}</Link>
             </li>
