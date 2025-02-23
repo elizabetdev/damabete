@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import NextImage from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { syncopate } from "@/utils/fonts";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -86,8 +85,8 @@ export const Header = () => {
               >
                 <li
                   className={`p-4 duration-300 cursor-pointer uppercase text-4xl font-bold  ${
-                    syncopate.className
-                  } ${pathname === item.href ? "text-white'" : "text-trail"}`}
+                    pathname === item.href ? "text-white'" : "text-trail"
+                  }`}
                 >
                   {item.text}
                 </li>

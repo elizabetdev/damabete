@@ -1,8 +1,8 @@
 import React from "react";
 import { PageWrapper } from "./PageWrapper";
-
 import NextImage from "next/image";
 import { Timeline } from "./Timeline";
+import Link from "next/link";
 
 const data = [
   {
@@ -229,7 +229,8 @@ const data = [
           Hoje em dia, considero-me uma artista multidisciplinar. Sou design
           engineer, rapper e coder. Finalmente encontrei o equilíbrio entre a
           música e a tecnologia, duas paixões que me definem, e é através delas
-          que consigo expressar quem sou em todos os meus projetos.
+          que consigo expressar quem sou em todos os meus projetos.{" "}
+          <Link href="https://www.elizabet.dev/">Vê o meu site de</Link>.
         </p>
       </section>
     ),

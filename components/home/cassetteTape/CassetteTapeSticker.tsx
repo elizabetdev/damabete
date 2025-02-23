@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { permanentMarker } from "@/utils/fonts";
 
 type CassetteTapeStickerProps = {
   title: string;
@@ -218,7 +217,7 @@ export const CassetteTapeSticker: FC<CassetteTapeStickerProps> = ({
             y="386"
             fill="#1c2022"
             dominantBaseline="ideographic"
-            className={`${permanentMarker.className}`}
+            className="font-marker"
             fontSize="23"
             fontWeight="400"
             lengthAdjust="spacingAndGlyphs"

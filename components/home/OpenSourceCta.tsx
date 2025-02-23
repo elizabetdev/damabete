@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getGitHubStars } from "@/utils/github";
 import { cn } from "@/utils/classes";
 import { FaGithub } from "react-icons/fa6";
-import { syncopate } from "@/utils/fonts";
 
 interface OpenSourceCtaProps {
   className?: string;
@@ -18,7 +17,7 @@ export const OpenSourceCta = async (props: OpenSourceCtaProps) => {
       className={cn("mx-auto max-w-2xl px-6 text-center mb-24", className)}
     >
       <h2
-        className={`mx-auto mt-8 max-w-2xl text-2xl font-bold tracking-tighter lg:text-4xl uppercase ${syncopate.className}`}
+        className={`mx-auto mt-8 max-w-2xl text-2xl font-bold tracking-tighter lg:text-4xl uppercase font-heading`}
       >
         Proudly <span className="text-rose-500">open-source</span>
       </h2>

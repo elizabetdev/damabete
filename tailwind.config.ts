@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         syncopate: ["var(--font-syncopate)"],
         marker: ["var(--font-permanentMarker)"],
+        heading: ["var(--font-heading)"],
       },
       colors: {
         accent: "var(--accent)",

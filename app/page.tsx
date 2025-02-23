@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <BentoGrid />
       <BlogListPreview />
+      <BentoGrid />
       <ScrollBasedTextFooter />
     </main>
   );

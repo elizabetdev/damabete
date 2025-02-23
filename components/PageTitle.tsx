@@ -1,4 +1,3 @@
-import { syncopate } from "@/utils/fonts";
 import { cn } from "@/utils/classes";
 
 export const PageTitle = ({
@@ -14,7 +13,7 @@ export const PageTitle = ({
     <>
       <h2
         className={cn(
-          `mb-6 text-4xl text-center md:text-6xl xl:text-7xl text-[--accent] font-bold font-heading tracking-px-n leading-none uppercase ${syncopate.className}`,
+          `mb-6 text-3xl text-center md:text-5xl xl:text-6xl text-[--accent] font-bold font-heading tracking-px-n leading-none uppercase`,
           className
         )}
       >

@@ -1,5 +1,3 @@
-import { syncopate } from "@/utils/fonts";
-
 export const SectionTitle = ({
   title,
   description,
@@ -10,7 +8,7 @@ export const SectionTitle = ({
   return (
     <>
       <h2
-        className={`mb-6 text-2xl md:text-6xl xl:text-6xl text-[--accent] font-bold font-heading tracking-px-n leading-none uppercase text-center ${syncopate.className}`}
+        className={`mb-6 text-2xl md:text-5xl xl:text-6xl text-[--accent] font-bold font-heading tracking-px-n leading-none uppercase text-center`}
       >
         {title}
       </h2>
