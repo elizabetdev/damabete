@@ -110,7 +110,7 @@ export const BlogList: React.FC<BlogListProps> = ({
                       <DateBadge date={item.date} />
                     </div>
 
-                    <h3 className="text-lg font-medium font-heading leading-normal mb-3">
+                    <h3 className="text-lg font-medium leading-normal mb-3">
                       {item.title}
                     </h3>
 
