@@ -230,7 +230,10 @@ const data = [
           engineer, rapper e coder. Finalmente encontrei o equilíbrio entre a
           música e a tecnologia, duas paixões que me definem, e é através delas
           que consigo expressar quem sou em todos os meus projetos.{" "}
-          <Link href="https://www.elizabet.dev/">Vê o meu site de</Link>.
+          <Link href="https://www.elizabet.dev/">
+            Explora o meu trabalho como design engineer em elizabet.dev
+          </Link>
+          .
         </p>
       </section>
     ),
