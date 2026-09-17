@@ -38,7 +38,7 @@ const data = [
       <section>
         <NextImage
           alt=""
-          src="/img/timeline/madorna@2x.png"
+          src="/img/timeline/hiphop-ladies@2x.png"
           width={700}
           height={475}
           quality={90}
