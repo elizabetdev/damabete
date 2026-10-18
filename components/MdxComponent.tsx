@@ -80,7 +80,28 @@ const components = {
   p: ({ className, ...props }) => (
     <p
       className={clsx(
-        "leading-7 [&:not(:first-child)]:mt-6 [&:last-of-type]:mb-6",
+        "text-lg leading-8 text-zinc-300 [&:not(:first-child)]:mt-7 [&:last-of-type]:mb-6",
+        className
+      )}
+      {...props}
+    />
+  ),
+  strong: ({ className, ...props }) => (
+    <strong className={clsx("font-semibold text-white", className)} {...props} />
+  ),
+  Lead: ({ className, ...props }) => (
+    <p
+      className={clsx(
+        "mt-8 text-xl leading-8 text-zinc-100 sm:text-2xl sm:leading-9",
+        className
+      )}
+      {...props}
+    />
+  ),
+  Beat: ({ className, ...props }) => (
+    <p
+      className={clsx(
+        "my-10 font-heading text-2xl leading-tight tracking-tight text-white sm:text-3xl",
         className
       )}
       {...props}
@@ -98,7 +119,8 @@ const components = {
   blockquote: ({ className, ...props }) => (
     <blockquote
       className={clsx(
-        "mt-6 border-l-2 border-zinc-300 pl-6 italic text-zinc-800 [&>*]:text-zinc-600",
+        "relative my-3 border-l-2 border-rose-500 bg-zinc-900/70 py-4 pl-5 pr-5 text-xl italic leading-snug text-zinc-50 first-of-type:mt-10 last-of-type:mb-10 sm:text-2xl [&+blockquote]:mt-2",
+        "[&>p]:!m-0 [&>p]:!text-xl [&>p]:!font-normal [&>p]:!italic [&>p]:!leading-snug [&>p]:!text-zinc-50 sm:[&>p]:!text-2xl",
         className
       )}
       {...props}
@@ -111,7 +133,7 @@ const components = {
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className={clsx("rounded-md border border-zinc-600", className)}
+      className={clsx("my-2 rounded-md border border-zinc-700", className)}
       alt={alt}
       {...props}
     />
