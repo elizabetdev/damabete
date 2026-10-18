@@ -66,7 +66,7 @@ export const Header = () => {
           <div className="flex justify-between items-center h-24 max-w-screen-xl mx-auto px-4 text-white w-full">
             <h1 className="w-full">
               <Link href="/">
-                <NextImage alt="" src="img/logo.svg" width={287} height={21} />
+                <NextImage alt="" src="/img/logo.svg" width={287} height={21} />
               </Link>
             </h1>
 
