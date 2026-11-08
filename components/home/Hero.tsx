@@ -2,6 +2,7 @@
 import NextImage from "next/image";
 import { GridItem } from "../GridItem";
 import { SocialMediaList } from "../SocialMediaList";
+import { Spotify } from "../Spotify";
 
 export const Hero = () => {
   return (
@@ -62,8 +63,22 @@ export const Hero = () => {
         </h1>
 
         <p className="text-2xl leading-loose max-w-screen-lg mx-auto text-zinc-300">
-          Rapper. Award-Winning Design Engineer. Tech Speaker.
+          A primeira dama do rap.
         </p>
+
+        <div className="mt-8 w-full max-w-md text-left">
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-rose-500">
+            Novo single
+          </p>
+          <Spotify
+            link="https://open.spotify.com/track/7KUwgcT6zCZsPsWTdPeaet"
+            wide
+            height={152}
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify: CALA A BOCA"
+          />
+        </div>
 
         <SocialMediaList />
       </div>
