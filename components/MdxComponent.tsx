@@ -9,6 +9,7 @@ import { PieChart as LivroHhTugaMulheresPieChart } from "@/components/projects/l
 import { ScatterPlot as LivroHhTugaMulheresScatterPlot } from "@/components/projects/livroHhTugaMulheres/ScatterPlot";
 import { LineChart as LivroHhTugaMulheresLineChart } from "@/components/projects/livroHhTugaMulheres/LineChart";
 import { TikTok, YouTube, Instagram } from "mdx-embed";
+import { Spotify } from "@/components/Spotify";
 
 function clsx(...args: any) {
   return args.filter(Boolean).join(" ");
@@ -189,6 +190,7 @@ const components = {
   TikTok,
   YouTube,
   Instagram,
+  Spotify,
 };
 
 interface MdxProps {
